@@ -16,38 +16,6 @@ def assemble_birthday_list(birthdays: list, reference_date: datetime, past_days:
                 near_birthday['age'] = birthday.age(reference_date)
             near_birthdays.append(near_birthday)
     return near_birthdays
-#
-# class BirthdayList(list):
-#     """Assemble the dict with relevant birthdays
-#        Accepts a list of party_people (names and birthdays)."""
-# # IDEE: NearBirthdays de class laten zijn, overerfen van list. Wat voegt BirthdayList nog toen als class?
-#     # @property
-#     # def list(self):
-#     #     return self._party_people
-#
-#     def near_birthdays(self, date: datetime, past_days: int, future_days: int):
-#         near_birthdays = []
-#         for birthday in self:
-#             if birthday.in_range(date, past_days, future_days):
-#                 near_birthdays.append(birthday)
-#         return near_birthdays
-#
-#     # def append(self, name, birthday):
-    #     self._party_people[name] = birthday
-    #
-    # def __init__(self, party_people: list):
-    #     self._party_people = party_people
-    #     super()
-    #
-    # def __repr__(self):
-    #     return f"BirthdayList({self._party_people})"
-    #
-    # def __str__(self):
-    #     return str(self._party_people)
-    #
-    # def __getitem__(self, index):
-    #     return self._party_people[index5]
-
 
 # bd1 = Birthday(name='piet', year=1975, month=12, day=1)
 # bd2 = Birthday(name='kees', year=1975, month=12, day=2)
