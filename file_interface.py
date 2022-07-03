@@ -24,10 +24,10 @@ def read_jarig_file() -> list:
     return birthdays
 
 
-birthdays = read_jarig_file()
-print(birthdays)
-today = datetime(2022, 6, 29)
-party_list = assemble_birthday_list(birthdays, today, 20, 10)
-
-for party in party_list:
-    print(party['name'], party['party_date'], party['age'] if 'age' in party else "?")
+# birthdays = read_jarig_file()
+# print(birthdays)
+# today = datetime(2022, 6, 29)
+# party_list = assemble_birthday_list(birthdays, today, 20, 10)
+#
+# for party in party_list:
+#     print(party['name'], party['party_date'], party['age'] if 'age' in party else "?")
