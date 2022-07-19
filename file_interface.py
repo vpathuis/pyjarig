@@ -6,8 +6,8 @@ from birthday import Birthday
 from birthday_list import assemble_birthday_list
 
 
-def read_jarig_file() -> list:
-    with open('jarig.csv') as csv_file:
+def read_jarig_file(filename) -> list:
+    with open(filename) as csv_file:
         birthdays = []
         csv_reader = csv.DictReader(csv_file, delimiter=',')
         line_count = 0
@@ -24,10 +24,11 @@ def read_jarig_file() -> list:
     return birthdays
 
 
-# birthdays = read_jarig_file()
-# print(birthdays)
-# today = datetime(2022, 6, 29)
-# party_list = assemble_birthday_list(birthdays, today, 20, 10)
-#
-# for party in party_list:
-#     print(party['name'], party['party_date'], party['age'] if 'age' in party else "?")
+if __name__ == "__main__":
+    birthdays = read_jarig_file('jarig.csv')
+    print(birthdays)
+    today = datetime(2022, 6, 29)
+    party_list = assemble_birthday_list(birthdays, today, 20, 10)
+
+    for party in party_list:
+        print(party['name'], party['party_date'], party['age'] if 'age' in party else "?")

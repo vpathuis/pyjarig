@@ -71,13 +71,14 @@ class Birthday:
         else:
             return f"{self.day}-{self.month}"
 
-#
-# p1 = Birthday(name='piet', year=1975, month=12, day=29)
-# today = datetime.now()
-# print('today: ', today)
-# print('bd1:', repr(p1))
-# print('bd1:', p1, '(' + str(p1.age(today)) + ')')
-# print('today:', p1.is_birthday(today))
-# party_date = p1.in_range(today, 250, 25)
-# if party_date:
-#     print('party date:', party_date)
+
+if __name__ == "__main__":
+    p1 = Birthday(name='piet', year=1975, month=12, day=29)
+    today = datetime.now()
+    print('today: ', today)
+    print('bd1:', repr(p1))
+    print('bd1:', p1, '(' + str(p1.age(today)) + ')')
+    print('today:', p1.is_birthday(today))
+    party_date = p1.in_range(today, 250, 25)
+    if party_date:
+        print('party date:', party_date)
